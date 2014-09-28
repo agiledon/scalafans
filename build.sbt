@@ -17,7 +17,7 @@ libraryDependencies ++= {
     "org.json4s"          %% "json4s-native"      % "3.2.4",
     "com.typesafe.akka"   %%  "akka-actor"    % akkaV,
     "com.typesafe.akka"   %%  "akka-testkit"  % akkaV   % "test",
-    "org.specs2"          %%  "specs2"        % "2.2.3" % "test"
+    "org.scalatest"       %%  "scalatest"         % "2.1.0"         % "test"
   )
 }
 
