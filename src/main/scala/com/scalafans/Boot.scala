@@ -11,4 +11,6 @@ object Boot extends App with RouteConcatenation
                         with RoutesBuilder  {
   val service = system.actorOf(Props(RoutedHttpService(routes.reduce(_ ~ _))), "scalafans-service")
   IO(Http) ! Http.Bind(service, interface = "localhost", port = 8080)
+
+  sys.addShutdownHook(system.shutdown())
 }

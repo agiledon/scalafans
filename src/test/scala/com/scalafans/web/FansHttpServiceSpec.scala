@@ -1,15 +1,13 @@
 package com.scalafans.web
 
-import com.scalafans.basic.HttpSerivceSpec
+import com.scalafans.basic.HttpServiceSpec
 import com.scalafans.domain.model.Fans
 import scala.concurrent.duration._
 
-class FansHttpServiceSpec extends HttpSerivceSpec with FansHttpService {
+class FansHttpServiceSpec extends HttpServiceSpec with FansHttpService {
   info("test FansHttpService")
 
   implicit val routeTestTimeout = RouteTestTimeout(25.seconds)
-
-  def actorRefFactory = system
 
   feature("FansHttpService") {
     scenario("fetch the specific fans given id") {

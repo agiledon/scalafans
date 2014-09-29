@@ -5,6 +5,6 @@ import spray.routing.Route
 
 trait RoutesBuilder {
      val routes: List[Route] = List(
-        new FansHttpService with ActorSystemSupport {}.route
+        new FansHttpService with ActorSystemSupport{}.route
      )
 }
